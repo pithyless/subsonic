@@ -1,11 +1,29 @@
+# Setup
 
-# IMDB Data
+## Must have
+* JDK (Java Development Kit), minimum version 8
+* [boot-clj](https://github.com/boot-clj/boot/blob/master/README.md#install)
 
-https://github.com/arangodb/example-datasets/tree/master/Graphs/IMDB
+## Nice to have
+* git
+* Chrome browser
 
+## How to test?
 
-* Get Datomic
+```
+java -version
 
-https://my.datomic.com/downloads/free
+git --version
 
-https://github.com/alexanderkiel/datomic-free
+boot -h
+```
+
+# Play
+
+```
+ export BOOT_JVM_OPTIONS="-client -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Xms4g -Xmx4g -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -Xverify:none"
+
+boot run
+```
+
+Open [localhost:4000](http://localhost:4000)
